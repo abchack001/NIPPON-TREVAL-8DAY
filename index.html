@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>九州夢幻之旅 ✈️ 8天7夜行程表</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --sky-blue: #87CEEB;
+            --soft-blue: #B0E0E6;
+            --grass-green: #90EE90;
+            --sunset-orange: #FFB347;
+            --warm-yellow: #FFE5B4;
+            --soft-pink: #FFB6C1;
+            --cloud-white: #F0F8FF;
+            --tree-green: #8FBC8F;
+            --earth-brown: #D2B48C;
+            --deep-green: #3CB371;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(180deg, #E6F3FF 0%, #FFF5E6 50%, #FFE8E8 100%);
+            color: #2C3E50;
+            line-height: 1.8;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Animated clouds */
+        .clouds {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .cloud {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 100px;
+            animation: float-cloud linear infinite;
+        }
+
+        .cloud::before,
+        .cloud::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.6);
+            border-radius: 100px;
+        }
+
+        .cloud1 {
+            width: 100px;
+            height: 40px;
+            top: 10%;
+            animation-duration: 60s;
+        }
+
+        .cloud1::before {
+            width: 50px;
+            height: 50px;
+            top: -25px;
+            left: 10px;
+        }
+
+        .cloud1::after {
+            width: 60px;
+            height: 40px;
+            top: -15px;
+            right: 10px;
+        }
+
+        .cloud2 {
+            width: 120px;
+            height: 45px;
+            top: 25%;
+            animation-duration: 80s;
+            animation-delay: -20s;
+        }
+
+        .cloud2::before {
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            left: 15px;
+        }
+
+        .cloud2::after {
+            width: 70px;
+            height: 45px;
+            top: -20px;
+            right: 15px;
+        }
+
+        .cloud3 {
+            width: 90px;
+            height: 35px;
+            top: 60%;
+            animation-duration: 70s;
+            animation-delay: -40s;
+        }
+
+        .cloud3::before {
+            width: 45px;
+            height: 45px;
+            top: -20px;
+            left: 10px;
+        }
+
+        .cloud3::after {
+            width: 55px;
+            height: 35px;
+            top: -15px;
+            right: 10px;
+        }
+
+        @keyframes float-cloud {
+            from {
+                left: -200px;
+            }
+            to {
+                left: 100%;
+            }
+        }
+
+        /* Birds animation */
+        .birds {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .bird {
+            position: absolute;
+            font-size: 20px;
+            animation: fly 25s linear infinite;
+        }
+
+        .bird1 {
+            top: 15%;
+            animation-delay: 0s;
+        }
+
+        .bird2 {
+            top: 30%;
+            animation-delay: 8s;
+        }
+
+        .bird3 {
+            top: 45%;
+            animation-delay: 16s;
+        }
+
+        @keyframes fly {
+            from {
+                left: -50px;
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-30px);
+            }
+            to {
+                left: 100%;
+                transform: translateY(0);
+            }
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 3rem 0;
+        }
+
+        .main-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2C5F2D;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0px rgba(255, 255, 255, 0.8);
+            position: relative;
+            display: inline-block;
+        }
+
+        .main-title::after {
+            content: '✨';
+            position: absolute;
+            top: -20px;
+            right: -40px;
+            font-size: 2rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #FF6B6B;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .travel-dates {
+            font-size: 1.2rem;
+            color: #4A90E2;
+            font-weight: 500;
+        }
+
+        /* Illustration */
+        .header-illustration {
+            margin: 2rem auto;
+            text-align: center;
+            font-size: 3rem;
+            letter-spacing: 0.5rem;
+        }
+
+        /* Trip Overview */
+        .trip-overview {
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 30px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+            border: 3px solid #90EE90;
+            position: relative;
+        }
+
+        .trip-overview::before {
+            content: '🌸';
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 3rem;
+            background: white;
+            padding: 0 1rem;
+        }
+
+        .overview-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2rem;
+            color: #2C5F2D;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-weight: 700;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .info-box {
+            background: linear-gradient(135deg, #FFF9E6 0%, #FFE8E8 100%);
+            border-radius: 20px;
+            padding: 1.8rem;
+            border: 2px solid #FFB347;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .info-box:hover {
+            transform: translateY(-8px) rotate(1deg);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .info-box h3 {
+            font-size: 1.2rem;
+            color: #E67E22;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-box p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin-top: 3rem;
+        }
+
+        /* Day Card */
+        .day-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .day-card:nth-child(odd) {
+            border-color: #90EE90;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(224, 255, 224, 0.3) 100%);
+        }
+
+        .day-card:nth-child(even) {
+            border-color: #87CEEB;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(224, 240, 255, 0.3) 100%);
+        }
+
+        .day-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .day-badge {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            background: linear-gradient(135deg, #FF6B6B, #FFB347);
+            color: white;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .day-header {
+            margin-bottom: 2rem;
+        }
+
+        .day-title {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2rem;
+            color: #2C5F2D;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .day-subtitle {
+            font-size: 1.3rem;
+            color: #4A90E2;
+            font-weight: 500;
+            margin-bottom: 0.8rem;
+        }
+
+        .day-theme {
+            font-size: 1.1rem;
+            color: #E67E22;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        /* Activities */
+        .activities {
+            list-style: none;
+        }
+
+        .activity {
+            background: rgba(255, 255, 255, 0.7);
+            border-left: 5px solid #4A90E2;
+            border-radius: 0 15px 15px 0;
+            padding: 1.3rem 1.5rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .activity:hover {
+            background: rgba(255, 255, 255, 0.95);
+            border-left-color: #FF6B6B;
+            transform: translateX(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .activity::before {
+            content: '🎯';
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.5rem;
+            background: white;
+            padding: 0.3rem;
+            border-radius: 50%;
+        }
+
+        .activity-time {
+            display: inline-block;
+            background: linear-gradient(135deg, #4A90E2, #87CEEB);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 3px 10px rgba(74, 144, 226, 0.3);
+        }
+
+        .activity-name {
+            font-size: 1.15rem;
+            color: #2C3E50;
+            font-weight: 500;
+            line-height: 1.7;
+            margin-bottom: 0.3rem;
+        }
+
+        .activity-duration {
+            display: inline-block;
+            background: rgba(255, 179, 71, 0.2);
+            color: #E67E22;
+            padding: 0.2rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-left: 0.5rem;
+            border: 1px solid #FFB347;
+            font-weight: 600;
+        }
+
+        .activity-note {
+            font-size: 0.95rem;
+            color: #27AE60;
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            border-left: 2px solid #90EE90;
+            font-style: italic;
+        }
+
+        /* Accommodation */
+        .accommodation {
+            background: linear-gradient(135deg, #FFF0F5, #FFE8F0);
+            border: 2px solid #FFB6C1;
+            border-radius: 20px;
+            padding: 1.2rem 1.5rem;
+            margin-top: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.2);
+        }
+
+        .accommodation::before {
+            content: '🏨';
+            font-size: 2rem;
+        }
+
+        .accommodation-text {
+            font-size: 1.1rem;
+            color: #C44569;
+            font-weight: 600;
+        }
+
+        /* Decorative elements */
+        .section-divider {
+            text-align: center;
+            margin: 3rem 0;
+            font-size: 2rem;
+            opacity: 0.6;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 4rem;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 30px;
+            border-top: 3px solid #90EE90;
+        }
+
+        .footer-text {
+            font-size: 1.3rem;
+            color: #2C5F2D;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .footer-emoji {
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .day-title {
+                font-size: 1.5rem;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .activity::before {
+                display: none;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Clouds Animation -->
+    <div class="clouds">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+    </div>
+
+    <!-- Birds Animation -->
+    <div class="birds">
+        <div class="bird bird1">🕊️</div>
+        <div class="bird bird2">🕊️</div>
+        <div class="bird bird3">🕊️</div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="main-title">九州夢幻之旅</h1>
+            <p class="subtitle">🌸 溫泉 · 動物 · 美食 · 自然 🌸</p>
+            <p class="travel-dates">2026年5月16日 - 5月23日</p>
+            <div class="header-illustration">✈️ 🗾 🎌 🍜 ♨️</div>
+        </header>
+
+        <!-- Trip Overview -->
+        <div class="trip-overview">
+            <h2 class="overview-title">旅程總覽</h2>
+            
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>✈️ 去程航班</h3>
+                    <p>
+                        2026年5月16日 (六)<br>
+                        桃園機場 → 福岡國際機場<br>
+                        星宇航空 JX840<br>
+                        09:35 → 13:05
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <h3>✈️ 回程航班</h3>
+                    <p>
+                        2026年5月23日 (六)<br>
+                        福岡國際機場 → 桃園國際機場<br>
+                        星宇航空 JX941<br>
+                        14:15 → 15:45
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <h3>🚗 交通方式</h3>
+                    <p>
+                        5/16-5/21: 租車自駕<br>
+                        NIPPON RENT A CAR<br>
+                        福岡機場取車 → 博多駅還車<br>
+                        5/22-5/23: 地鐵 & 公車
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <h3>🏨 住宿安排</h3>
+                    <p>
+                        5/16-5/19: 別府野上本館 (3晚)<br>
+                        5/19-5/20: 旅館 豊後乃里 (1晚)<br>
+                        5/20-5/23: Daiwa Roynet Hotel 博多祇園 (3晚)
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-divider">🌺 🌺 🌺</div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-badge">第1天 🌟</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 1</h2>
+                    <p class="day-subtitle">2026年5月16日 (星期五)</p>
+                    <p class="day-theme">✈️ 啟程前往別府溫泉之鄉</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">09:35 出發</div>
+                        <div class="activity-name">桃園機場出發</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">13:05 抵達</div>
+                        <div class="activity-name">抵達福岡國際機場</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">13:30 - 15:30</div>
+                        <div class="activity-name">
+                            入境、領取行李、前往租車櫃檯
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">15:30 取車</div>
+                        <div class="activity-name">NIPPON RENT A CAR 福岡機場國際線取車</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">15:45 - 18:15</div>
+                        <div class="activity-name">
+                            駕車前往別府
+                            <span class="activity-duration">2.5小時車程</span>
+                        </div>
+                        <div class="activity-note">經由九州自動車道，沿途欣賞九州美景</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">18:30 入住</div>
+                        <div class="activity-name">別府野上本館 CHECK IN</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">19:30 - 21:30</div>
+                        <div class="activity-name">
+                            YouMe 購物中心晚餐 & 逛街
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">輕鬆用餐，採購日用品，調整時差</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：別府野上本館（溫泉旅館）</span>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-badge">第2天 🎀</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 2</h2>
+                    <p class="day-subtitle">2026年5月17日 (星期六)</p>
+                    <p class="day-theme">🎠 三麗鷗樂園夢幻一日遊</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            飯店享用日式早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:30 - 10:00</div>
+                        <div class="activity-name">
+                            前往 Harmonyland 三麗鷗樂園
+                            <span class="activity-duration">30分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">10:00 - 17:00</div>
+                        <div class="activity-name">
+                            Harmonyland 三麗鷗樂園遊玩
+                            <span class="activity-duration">全日7小時</span>
+                        </div>
+                        <div class="activity-note">Hello Kitty、美樂蒂、布丁狗、大耳狗喜拿等角色表演</div>
+                        <div class="activity-note">遊樂設施、角色見面會、主題餐廳</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">17:00 - 18:00</div>
+                        <div class="activity-name">
+                            杵築城參觀（選擇性行程）
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                        <div class="activity-note">如提早離開樂園可前往，欣賞城堡風光</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">18:30 返回</div>
+                        <div class="activity-name">返回別府野上本館休息</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：別府野上本館（溫泉旅館）</span>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-badge">第3天 🦁</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 3</h2>
+                    <p class="day-subtitle">2026年5月18日 (星期日)</p>
+                    <p class="day-theme">🐯 野生動物奇遇 & 地獄溫泉巡禮</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            飯店享用日式早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:30 - 10:10</div>
+                        <div class="activity-name">
+                            前往九州自然動物園
+                            <span class="activity-duration">40分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">10:15 - 12:15</div>
+                        <div class="activity-name">
+                            九州自然動物園自駕遊園
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">獅子、老虎、長頸鹿、斑馬等野生動物近距離接觸</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">12:30 - 14:00</div>
+                        <div class="activity-name">
+                            遊園專車餵食體驗（預約制）
+                            <span class="activity-duration">1.5小時</span>
+                        </div>
+                        <div class="activity-note">專業導覽員帶領，親手餵食動物</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">14:00 - 15:00</div>
+                        <div class="activity-name">
+                            午餐休息
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">15:30 - 18:30</div>
+                        <div class="activity-name">
+                            別府地獄溫泉巡遊
+                            <span class="activity-duration">3小時</span>
+                        </div>
+                        <div class="activity-note">海地獄（鈷藍色）、血池地獄（紅色）、龍卷地獄（間歇泉）</div>
+                        <div class="activity-note">鬼石坊主地獄、白池地獄、鬼山地獄、灶地獄</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">19:00 返回</div>
+                        <div class="activity-name">返回別府野上本館，享受溫泉</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：別府野上本館（溫泉旅館）</span>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-card">
+                <div class="day-badge">第4天 🚡</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 4</h2>
+                    <p class="day-subtitle">2026年5月19日 (星期一)</p>
+                    <p class="day-theme">⛰️ 鶴見岳纜車 & 由布院浪漫散策</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            飯店享用日式早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:30 - 09:50</div>
+                        <div class="activity-name">
+                            前往鶴見岳纜車站
+                            <span class="activity-duration">20分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">10:00 - 12:00</div>
+                        <div class="activity-name">
+                            鶴見岳纜車觀景之旅
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">搭乘纜車登頂1,375公尺，360度俯瞰別府灣與四國</div>
+                        <div class="activity-note">山頂參拜鶴見岳神社，欣賞高山植物</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">12:30 - 13:00</div>
+                        <div class="activity-name">
+                            前往由布院
+                            <span class="activity-duration">30分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">13:00 - 16:00</div>
+                        <div class="activity-name">
+                            湯之坪街道散步購物
+                            <span class="activity-duration">3小時</span>
+                        </div>
+                        <div class="activity-note">特色雜貨店、手工藝品、甜點店、咖啡廳</div>
+                        <div class="activity-note">B-speak蛋糕捲、由布院布丁、Snoopy茶屋</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">16:00 - 17:00</div>
+                        <div class="activity-name">
+                            金鱗湖畔漫步
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                        <div class="activity-note">夢幻湖景，清晨與黃昏溫泉霧氣繚繞</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">17:30 - 19:00</div>
+                        <div class="activity-name">
+                            由布院特色料理晚餐
+                            <span class="activity-duration">1.5小時</span>
+                        </div>
+                        <div class="activity-note">豐後牛、地雞料理、鄉土料理</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">19:30 - 20:00</div>
+                        <div class="activity-name">
+                            前往旅館 豊後乃里
+                            <span class="activity-duration">30分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">20:00 入住</div>
+                        <div class="activity-name">旅館 豊後乃里 CHECK IN，享受溫泉</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：旅館 豊後乃里（日式旅館）</span>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-card">
+                <div class="day-badge">第5天 👘</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 5</h2>
+                    <p class="day-subtitle">2026年5月20日 (星期二)</p>
+                    <p class="day-theme">🏯 太宰府和服體驗 & 前往博多</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            旅館享用日式早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:30 - 11:00</div>
+                        <div class="activity-name">
+                            駕車前往太宰府
+                            <span class="activity-duration">1.5小時車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">11:00 - 11:30</div>
+                        <div class="activity-name">
+                            太宰府和服體驗（預約制）
+                            <span class="activity-duration">30分鐘</span>
+                        </div>
+                        <div class="activity-note">換裝傳統和服，專業著裝與髮型設計</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">11:30 - 13:00</div>
+                        <div class="activity-name">
+                            太宰府天滿宮參拜
+                            <span class="activity-duration">1.5小時</span>
+                        </div>
+                        <div class="activity-note">學問之神菅原道真，祈求學業進步與考試合格</div>
+                        <div class="activity-note">欣賞梅花（春季）、飛梅傳說、御神牛</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">13:00 - 15:00</div>
+                        <div class="activity-name">
+                            太宰府參道街道散步
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">品嚐名物梅枝餅、星巴克太宰府店（隈研吾設計）</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">15:00 - 16:00</div>
+                        <div class="activity-name">
+                            午餐 & 歸還和服
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">16:00 - 16:30</div>
+                        <div class="activity-name">
+                            前往博多
+                            <span class="activity-duration">30分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">16:30 入住</div>
+                        <div class="activity-name">Daiwa Roynet Hotel 博多祇園 CHECK IN</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">17:30 - 18:30</div>
+                        <div class="activity-name">
+                            步行前往櫛田神社參拜
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                        <div class="activity-note">博多總鎮守，山笠祭典（7月）發源地</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">18:30 - 20:30</div>
+                        <div class="activity-name">
+                            川端通商店街購物 & 晚餐
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">福岡最古老商店街，傳統工藝品與美食</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：Daiwa Roynet Hotel 博多祇園</span>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-card">
+                <div class="day-badge">第6天 🐬</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 6</h2>
+                    <p class="day-subtitle">2026年5月21日 (星期三)</p>
+                    <p class="day-theme">🐠 海之中道水族館夢幻一日遊</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            飯店享用早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:30 - 10:10</div>
+                        <div class="activity-name">
+                            駕車前往海之中道水族館
+                            <span class="activity-duration">40分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">10:15 - 17:00</div>
+                        <div class="activity-name">
+                            海之中道水族館（Marine World）遊覽
+                            <span class="activity-duration">全日6.5小時</span>
+                        </div>
+                        <div class="activity-note">海豚表演秀（每日多場）、海獅表演</div>
+                        <div class="activity-note">水母夢幻展示區、企鵝餵食時間</div>
+                        <div class="activity-note">觸摸池互動體驗、九州近海生物展示</div>
+                        <div class="activity-note">全景水族箱、熱帶魚區</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">12:30 - 13:30</div>
+                        <div class="activity-name">
+                            午餐（水族館內餐廳或周邊）
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">17:00 - 17:40</div>
+                        <div class="activity-name">
+                            返回博多
+                            <span class="activity-duration">40分鐘車程</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">18:00 還車</div>
+                        <div class="activity-name">NIPPON RENT A CAR 博多駅博多口店還車</div>
+                        <div class="activity-note">結束6天自駕旅程，檢查車況並歸還</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">18:30 - 20:00</div>
+                        <div class="activity-name">
+                            博多站周邊晚餐
+                            <span class="activity-duration">1.5小時</span>
+                        </div>
+                        <div class="activity-note">博多拉麵、牛腸鍋、鐵鍋餃子等福岡美食</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：Daiwa Roynet Hotel 博多祇園</span>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-card">
+                <div class="day-badge">第7天 🛍️</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 7</h2>
+                    <p class="day-subtitle">2026年5月22日 (星期四)</p>
+                    <p class="day-theme">🏬 博多市區購物 & 美食巡禮</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            飯店享用早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:30 - 10:00</div>
+                        <div class="activity-name">
+                            搭乘地鐵前往福岡運河城
+                            <span class="activity-duration">30分鐘</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">10:00 - 14:00</div>
+                        <div class="activity-name">
+                            福岡運河城購物
+                            <span class="activity-duration">4小時</span>
+                        </div>
+                        <div class="activity-note">大型複合式購物中心，服飾、美妝、電器、雜貨</div>
+                        <div class="activity-note">運河水舞秀、拉麵競技場（多間拉麵名店）</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">14:00 - 15:30</div>
+                        <div class="activity-name">
+                            運河城午餐
+                            <span class="activity-duration">1.5小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">15:30 - 18:30</div>
+                        <div class="activity-name">
+                            博多市區伴手禮採購
+                            <span class="activity-duration">3小時</span>
+                        </div>
+                        <div class="activity-note">博多明太子、博多通饅頭、八女茶</div>
+                        <div class="activity-note">福太郎明太子煎餅、雞肉高湯</div>
+                        <div class="activity-note">藥妝店、唐吉訶德</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">19:00 - 21:00</div>
+                        <div class="activity-name">
+                            中洲屋台街晚餐體驗
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">福岡特色屋台文化，露天小吃攤</div>
+                        <div class="activity-note">博多拉麵、關東煮、燒烤、餃子</div>
+                        <div class="activity-note">感受在地夜生活氛圍，與老闆聊天</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">21:30 返回</div>
+                        <div class="activity-name">返回飯店整理行李，準備回國</div>
+                    </li>
+                </ul>
+                <div class="accommodation">
+                    <span class="accommodation-text">住宿：Daiwa Roynet Hotel 博多祇園</span>
+                </div>
+            </div>
+
+            <!-- Day 8 -->
+            <div class="day-card">
+                <div class="day-badge">第8天 🏠</div>
+                <div class="day-header">
+                    <h2 class="day-title">DAY 8</h2>
+                    <p class="day-subtitle">2026年5月23日 (星期五)</p>
+                    <p class="day-theme">✈️ 返程回家，滿載美好回憶</p>
+                </div>
+                <ul class="activities">
+                    <li class="activity">
+                        <div class="activity-time">08:00 - 09:00</div>
+                        <div class="activity-name">
+                            飯店享用早餐
+                            <span class="activity-duration">1小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">09:00 - 11:00</div>
+                        <div class="activity-name">
+                            最後採購 & 整理行李
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">11:00 退房</div>
+                        <div class="activity-name">飯店退房</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">11:30 - 11:45</div>
+                        <div class="activity-name">
+                            搭乘地鐵從祇園站前往福岡機場
+                            <span class="activity-duration">15分鐘</span>
+                        </div>
+                        <div class="activity-note">地鐵空港線直達，非常便利</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">12:00 - 14:00</div>
+                        <div class="activity-name">
+                            福岡國際機場辦理登機手續
+                            <span class="activity-duration">2小時</span>
+                        </div>
+                        <div class="activity-note">退稅、安檢、逛免稅店</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">14:15 起飛</div>
+                        <div class="activity-name">福岡國際機場起飛返台</div>
+                    </li>
+                    <li class="activity">
+                        <div class="activity-time">15:45 抵達</div>
+                        <div class="activity-name">抵達桃園國際機場</div>
+                        <div class="activity-note">帶著滿滿的回憶與伴手禮，期待下次旅程 ❤️</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section-divider">🌸 ✨ 🌸</div>
+
+        <footer>
+            <p class="footer-text">願這趟九州之旅留下最美好的回憶</p>
+            <p class="footer-text" style="font-size: 1.1rem; color: #E67E22;">
+                8天7夜 · 溫泉 · 美食 · 自然 · 樂園 · 文化體驗
+            </p>
+            <div class="footer-emoji">🗾 ♨️ 🍜 🎠 🐬 🏯 🌸</div>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '0';
+                    entry.target.style.transform = 'translateY(30px)';
+                    
+                    setTimeout(() => {
+                        entry.target.style.transition = 'all 0.8s ease-out';
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }, 100);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all day cards
+        const dayCards = document.querySelectorAll('.day-card');
+        dayCards.forEach(card => observer.observe(card));
+
+        // Info box hover animation
+        const infoBoxes = document.querySelectorAll('.info-box');
+        infoBoxes.forEach(box => {
+            box.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+
+        // Activity hover sound effect simulation
+        const activities = document.querySelectorAll('.activity');
+        activities.forEach(activity => {
+            activity.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
+            });
+        });
+    </script>
+</body>
+</html>
